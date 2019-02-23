@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\WebMonitor.Entities\CheckUrl.cs" Link="CheckUrl.cs" />
+    <Compile Include="..\WebMonitor.Entities\Config.cs" Link="Config.cs" />
+    <Compile Include="..\WebMonitor.Entities\WebMonitorContext.cs" Link="WebMonitorContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.2" />
+  </ItemGroup>
+
+</Project>
