@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMonitor.Test", "WebMonit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.Demo", "WebMonitor.Demo\WebMonitor.Demo.csproj", "{EBC27038-E5CE-4196-BEB7-192CED93645C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.WinService", "WebMonitor.WinService\WebMonitor.WinService.csproj", "{434468A9-8389-4B78-AB29-3A0055079692}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{EBC27038-E5CE-4196-BEB7-192CED93645C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBC27038-E5CE-4196-BEB7-192CED93645C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBC27038-E5CE-4196-BEB7-192CED93645C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{434468A9-8389-4B78-AB29-3A0055079692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434468A9-8389-4B78-AB29-3A0055079692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{434468A9-8389-4B78-AB29-3A0055079692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{434468A9-8389-4B78-AB29-3A0055079692}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using WebMonitor.ServiceCore.Services;
+using WebMonitor.Test.Common;
 using Xunit;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace WebMonitor.Test.ServiceCore.Services
 {
@@ -14,15 +16,15 @@ namespace WebMonitor.Test.ServiceCore.Services
 
         public EmailServiceTest()
         {
-            this.emailService = new EmailService();
+            var serviceProvider = CommonUtils.GetServiceProviderWithRealEmail();
+
+            this.emailService = serviceProvider.GetService<IEmailService>();
         }
 
         [Fact]
         public async Task SendEmailAsyncTest()
         {
             await this.emailService.SendEmailAsync(
-                "nazozotole@mail-hub.info",
-                new string[] { "nazozotole@mail-hub.info", },
                 "Testing Email",
                 "Email content <p style='red'>Abc</p>");
         }

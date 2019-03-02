@@ -13,47 +13,50 @@ namespace WebMonitor.ServiceCore.Services
 
     public interface IEmailService
     {
-        Task SendEmailAsync(string from, string[] to, string subject, string html);
+        Task SendEmailAsync(string subject, string html);
     }
 
     public class EmailService : IEmailService
     {
+
+        ISettingsService settingsService;
+        public EmailService(ISettingsService settingsService)
+        {
+            this.settingsService = settingsService;
+        }
         
-        public async Task SendEmailAsync(string from, string[] to, string subject, string html)
+        public async Task SendEmailAsync(string subject, string html)
         {
             var request = WebRequest.CreateHttp("https://api.mailjet.com/v3.1/send");
             request.Method = "POST";
             request.ContentType = "application/json";
 
-            var username = "2414c889fc40419c209edfe5c158e335";
-            var password = "bd6e704c1b9ee8c975c1b821bd104db4";
+            var settings = this.settingsService.Get();
+            var emailSettings = settings.Email;
+
             var authKey = Convert.ToBase64String(
-                Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
+                Encoding.GetEncoding("ISO-8859-1").GetBytes(
+                    emailSettings.MailjetUsername + ":" + emailSettings.MailjetPassword));
             request.Headers.Add("Authorization", "Basic " + authKey);
 
             using (var requestBody = await request.GetRequestStreamAsync())
             {
                 using (var streamWriter = new StreamWriter(requestBody))
                 {
-                    await streamWriter.WriteAsync(JsonConvert.SerializeObject(new
+                    var body = JsonConvert.SerializeObject(new
                     {
                         Messages = new object[] {
                             new {
-                                From = new
-                                {
-                                    Email = from,
-                                    Name = from,
-                                },
-                                To = to.Select(q => new
-                                {
-                                    Email = q,
-                                    Name = q,
-                                }).ToList(),
+                                emailSettings.From,
+                                emailSettings.To,
                                 Subject = subject,
                                 HtmlPart = html,
                             }
                         },
-                    }));
+                    });
+
+
+                    await streamWriter.WriteAsync(body);
                 }
             }
 
