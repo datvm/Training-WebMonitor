@@ -59,7 +59,8 @@ namespace WebMonitor.ServiceCore.Services
 
             try
             {
-                using (var response = await request.GetResponseAsync())
+                using (var response = await request.GetResponseAsync()
+                    as HttpWebResponse)
                 {
 #if DEBUG
                     using (var responseBody = response.GetResponseStream())
@@ -89,5 +90,6 @@ namespace WebMonitor.ServiceCore.Services
             }
 
         }
+
     }
 }

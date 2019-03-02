@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.WebUI", "WebMonitor.WebUI\WebMonitor.WebUI.csproj", "{B602CE2F-9EF4-4CE8-9DA5-076E9E024640}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMonitor.WebUI", "WebMonitor.WebUI\WebMonitor.WebUI.csproj", "{B602CE2F-9EF4-4CE8-9DA5-076E9E024640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.WebApi", "WebMonitor.WebApi\WebMonitor.WebApi.csproj", "{65F1632D-2FB9-48CA-B348-E821E83A1628}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMonitor.WebApi", "WebMonitor.WebApi\WebMonitor.WebApi.csproj", "{65F1632D-2FB9-48CA-B348-E821E83A1628}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WebMonitor.Database", "WebMonitor.Database\WebMonitor.Database.sqlproj", "{F8C8D59A-2039-4FDB-AD3F-AAC20DCA8D95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.ServiceCore", "WebMonitor.ServiceCore\WebMonitor.ServiceCore.csproj", "{34E6BB7F-ECBD-49BC-8EBC-8E4D18172D9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMonitor.ServiceCore", "WebMonitor.ServiceCore\WebMonitor.ServiceCore.csproj", "{34E6BB7F-ECBD-49BC-8EBC-8E4D18172D9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.Entities", "WebMonitor.Entities\WebMonitor.Entities.csproj", "{89ABED9A-8E0A-405C-8458-7FE881EAE12C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMonitor.Entities", "WebMonitor.Entities\WebMonitor.Entities.csproj", "{89ABED9A-8E0A-405C-8458-7FE881EAE12C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.EntityTools", "WebMonitor.EntityTools\WebMonitor.EntityTools.csproj", "{979D764E-80ED-4C70-81A6-F90AA451863F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.Test", "WebMonitor.Test\WebMonitor.Test.csproj", "{5ADE6DDB-D491-4040-B680-1EAE2317AC78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMonitor.Test", "WebMonitor.Test\WebMonitor.Test.csproj", "{5ADE6DDB-D491-4040-B680-1EAE2317AC78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMonitor.Demo", "WebMonitor.Demo\WebMonitor.Demo.csproj", "{EBC27038-E5CE-4196-BEB7-192CED93645C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{5ADE6DDB-D491-4040-B680-1EAE2317AC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ADE6DDB-D491-4040-B680-1EAE2317AC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ADE6DDB-D491-4040-B680-1EAE2317AC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC27038-E5CE-4196-BEB7-192CED93645C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC27038-E5CE-4196-BEB7-192CED93645C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC27038-E5CE-4196-BEB7-192CED93645C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC27038-E5CE-4196-BEB7-192CED93645C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
